@@ -1,0 +1,24 @@
+@import "../../../styles/_variables.scss";
+
+.vertical-menu {
+    height: 100%;
+    background-color: $main-green;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        list-style-type: none;
+        min-height: 100%;
+    }
+
+    .menu-icon {
+        font-size: 34px !important;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+}

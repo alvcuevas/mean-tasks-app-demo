@@ -1,0 +1,25 @@
+.new-form-container {
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+
+    .mat-form-field {
+        width: 100%;
+    }
+
+    & > * {
+        width: 100%;
+    }
+
+    textarea {
+        height: 100px;
+    }
+}
+
+::ng-deep mat-option > span.mat-option-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

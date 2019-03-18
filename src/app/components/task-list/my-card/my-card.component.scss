@@ -1,0 +1,44 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    color:gray;
+    margin: 0 9px 0 8px!important;
+}
+
+.card {
+    padding: 8px;
+}
+
+.content {
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 43px;
+}
+
+.click {
+    cursor: pointer;
+}
+
+mat-card-header {
+    ::ng-deep .mat-card-header-text {
+        width: 100% !important;
+    }
+}
+
+.favorite {
+    color: #feb236;
+}
+
+.enable {
+    color: red;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+}
+

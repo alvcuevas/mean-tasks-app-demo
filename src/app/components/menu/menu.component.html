@@ -1,0 +1,39 @@
+<div class="vertical-menu">
+    <ul>
+        <li>
+            <button (click)="showNewTaskDialog()"
+                    matTooltip="Create"
+                    [matTooltipClass]="'tooltip'">
+                <i class="material-icons menu-icon">add_circle_outline</i>
+            </button>
+        </li>
+        <li>
+            <button (click)="showSearcher()"
+                    matTooltip="Search"
+                    [matTooltipClass]="'tooltip'">
+                <i class="material-icons menu-icon">search</i>
+            </button>
+        </li>
+        <li>
+            <button (click)="goToHome()"
+                    matTooltip="List"
+                    [matTooltipClass]="'tooltip'">
+                <i class="material-icons menu-icon">list</i>
+            </button>
+        </li>
+        <li>
+            <button (click)="goToFavorites()"
+                    matTooltip="Favorites"
+                    [matTooltipClass]="'tooltip'">
+                <i class="material-icons menu-icon">star</i>
+            </button>
+        </li>
+        <li>
+            <button (click)="goToDeleted()"
+                    matTooltip="Deleted"
+                    [matTooltipClass]="'tooltip'">
+                <i class="material-icons menu-icon">delete</i>
+            </button>
+        </li>
+    </ul>
+</div>

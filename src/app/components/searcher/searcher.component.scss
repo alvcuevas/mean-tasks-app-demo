@@ -1,0 +1,28 @@
+@import "../../../styles/_variables.scss";
+
+.search-container {
+
+    .searcher-input {
+        background-color: $soft-grey;  
+        border-radius: 35px;
+        height: 20%;
+        padding: 10px 0px 10px 20px;
+        width: 96%;       
+    }
+    
+    .choices {
+        background-color: $soft-grey;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 18px;
+        height: 70px;
+        margin-top: 5px;
+        overflow-y: scroll;
+        padding: 10px 0px 0px 30px;
+        
+        ul li {
+            cursor: pointer;
+        }
+    }
+    
+}

@@ -1,0 +1,43 @@
+<div *ngIf="iterations===0">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title class="title header">
+        <div>NOTES</div>
+        <div>{{counter}}</div>
+      </mat-card-title>
+    </mat-card-header>
+  </mat-card>
+  <mat-divider></mat-divider>
+</div>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title class="title">
+      <div>{{card.title}}</div>
+      <div>
+        <button #deleteButton
+                (click)="removeTask(card)"
+                [ngClass]="{'enable': !card.enable}">
+          <i class="material-icons">delete</i>
+        </button>
+        <button #favoriteButton
+                (click)="favoriteTask(card)"
+                [ngClass]="{'favorite': card.favorite}">
+          <i class="material-icons">star</i>
+        </button>
+        <button>
+          <i class="material-icons" [ngStyle]="{'color': categoryColor}">label</i>
+        </button>
+      </div>
+    </mat-card-title>
+    <mat-card-subtitle>Last week</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="content">
+    <div class="click" (click)="emitClickedCard(card)">{{card.description}}</div>
+    <div class="click" *ngIf="card.flag" (click)="deleteTask(card)">
+      <button class="delete">Delete</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-divider></mat-divider>

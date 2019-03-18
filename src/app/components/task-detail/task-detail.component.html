@@ -1,0 +1,52 @@
+<div class="wrapper">
+  <!-- Tasks list -->
+  <div class="tasks-list">
+    <div *ngFor="let task of tasks; let i = index">
+      <my-card [card]="task" [iterations]="i" [counter]="tasks.length"></my-card>
+    </div>
+  </div>
+
+  <!-- Task details -->
+  <div class="task-detail-container">
+    <div class="task-content" *ngIf="!isDisabled; else taskIsDisabled">
+      <div class="task-header">
+        {{task.title}}
+      </div>
+      <div class="task-category">
+        {{category}}
+        <i class="material-icons" [ngStyle]="{'color': categoryColor}">label</i>
+      </div>
+      <div class="task-labels" *ngIf="showLabels">
+        <mat-form-field>
+          <input #label matInput placeholder="Label name" (keyup.enter)="pickLabels(label.value)">
+        </mat-form-field>
+        <div class="labels-section" *ngFor="let label of labels">
+          {{label}}
+          <button (click)="removeLabel(label)">
+            <i class="material-icons close-btn">close</i>
+          </button>
+        </div>
+      </div>
+      <div class="task-description">
+        {{task.description}}
+      </div>
+      <div class="actions">
+        <button mat-fab color="primary" class="action-btn" matTooltip="Edit" [matTooltipClass]="'tooltip'">
+          <i class="material-icons">edit</i>
+        </button>
+        <button mat-fab color="primary" class="action-btn" (click)="displayLabelSection()" matTooltip="Labels" [matTooltipClass]="'tooltip'">
+          <i class="material-icons">label</i>
+        </button>
+        <button mat-fab color="primary" class="action-btn" matTooltip="Save" [matTooltipClass]="'tooltip'">
+          <i class="material-icons">save</i>
+        </button>
+      </div>
+    </div>
+
+    <ng-template #taskIsDisabled>
+      <div class="no-content">
+        Task disabled
+      </div>
+    </ng-template>
+  </div>
+</div>

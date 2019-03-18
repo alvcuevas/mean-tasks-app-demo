@@ -1,0 +1,27 @@
+<div class="new-form-container">
+  <form [formGroup]="newTaskForm">
+    <mat-form-field>
+      <input matInput placeholder="Title" formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Category" formControlName="category">
+        <mat-option *ngFor="let category of categories | async" [value]="category.text">
+          {{category.text}}
+          <mat-icon [ngStyle]="{'color': category.color}">label</mat-icon>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Write whatever..." formControlName="desc"></textarea>
+    </mat-form-field>
+
+    <button mat-fab color="primary"
+            [disabled]="!newTaskForm.valid"
+            (click)="submit()"
+            matTooltip="Add">
+      <i class="material-icons">add</i>
+    </button>
+  </form>
+</div>

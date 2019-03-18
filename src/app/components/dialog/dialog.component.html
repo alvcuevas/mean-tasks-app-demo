@@ -1,0 +1,14 @@
+<mat-grid-list cols="2" rowHeight="50px">
+  <mat-grid-tile class="tile-width">
+    <p class="p-width" mat-dialog-title>Create task</p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button class="close-btn" mat-button (click)="closeDialog()">
+      <i #closeIcon class="material-icons close">close</i>
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-dialog-content>
+  <new-task-form></new-task-form>
+</mat-dialog-content>

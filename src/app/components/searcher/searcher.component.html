@@ -1,0 +1,14 @@
+<div class="search-container">
+  <input matInput
+         #searchInput
+         class="searcher-input"
+         placeholder="Search a task name..."
+         (input)="findChoices(searchInput.value)"
+         (keyup.enter)="searchValue(searchInput.value)">
+
+  <div class="choices" *ngIf="displayChoices">
+    <ul *ngFor="let choice of choices">
+      <li (click)="getChoice(choice)">{{choice.title}}</li>
+    </ul>
+  </div>
+</div>

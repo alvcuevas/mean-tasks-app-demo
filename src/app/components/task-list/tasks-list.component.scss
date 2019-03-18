@@ -1,0 +1,21 @@
+.list-page {
+    display: flex;
+    flex-basis: 95%;
+    height: 100%;
+
+    .tasks-list {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-basis: 35%;
+    }
+
+    .no-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 5px;
+        font-size: 25px;
+        flex-basis: 65%
+    }
+}

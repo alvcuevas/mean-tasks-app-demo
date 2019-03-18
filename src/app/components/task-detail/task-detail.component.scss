@@ -1,0 +1,108 @@
+@import "../../../styles/_variables.scss";
+
+.wrapper {
+    display: flex;
+    height: 100%;
+
+    .tasks-list {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-basis: 44%;
+    }
+
+    .task-detail-container {
+        background-color: $light-grey;
+        flex-basis: 70%;
+        padding: 5%;
+    
+        .task-content {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+    
+            .task-category, .task-description, .task-labels {
+                margin-top: 20px;  
+                border-radius: 10px;
+                background-color: $soft-grey;   
+            }
+    
+            .task-header, .task-category {
+                padding: 10px 0px 10px 20px;
+            }
+    
+            .task-header {
+                font-weight: bold;
+                border-radius: 35px;
+                background-color: $dark-grey;         
+            }
+    
+            .task-category {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+    
+                & i {
+                    margin-left: 5px;
+                    font-size: 25px;
+                }
+            }
+    
+            .task-labels {
+                padding-left: 15px;
+            }
+        
+            .task-description {
+                height: 250px;
+                padding: 20px;
+            }
+    
+            .actions {
+                display: flex;
+                margin-top: 20px;
+    
+                .mat-fab.mat-primary {
+                    background: $main-green;
+                }
+    
+                .action-btn {
+                    margin-right: 25px;
+                }
+            }
+    
+            .labels-section {
+                display: inline-flex;
+                margin-bottom: 15px;
+                font-style: italic;
+                font-size: 16px;
+    
+                .close-btn {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-right: 10px;
+                    margin-left: 3px;
+                    color: red;
+                }
+            }
+        }
+    
+        .mat-form-field {
+            width: 98%;
+        }
+
+        .no-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 5px;
+            font-size: 25px;
+            height: 100%;
+        }
+
+    }
+}
+
+
+
+
+
